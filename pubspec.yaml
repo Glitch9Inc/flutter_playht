@@ -1,0 +1,16 @@
+name: flutter_playht
+description: "A new Flutter package project."
+version: 0.0.1
+homepage: https://github.com/Glitch9Inc/flutter_playht
+
+environment:
+  sdk: ">=3.3.4 <4.0.0"
+
+dependencies:
+  http: ^1.1.0
+  meta: ^1.9.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
