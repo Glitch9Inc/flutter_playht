@@ -21,7 +21,13 @@ enum OutputEmotion {
   male_surprised
 }
 
-enum OutputQuality { draft, low, medium, high, premium }
+enum OutputQuality {
+  draft,
+  low,
+  medium,
+  high,
+  premium,
+}
 
 enum OutputFormat {
   mp3,

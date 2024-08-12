@@ -1,3 +1,5 @@
+import 'package:flutter_corelib/flutter_corelib.dart';
+
 class VoiceModel {
   final String id;
   final String name;
@@ -7,9 +9,9 @@ class VoiceModel {
 
   factory VoiceModel.fromJson(Map<String, dynamic> json) {
     return VoiceModel(
-      id: json['id'],
-      name: json['name'],
-      sample: json['sample'],
+      id: json.getString('id'),
+      name: json.getString('name'),
+      sample: json.getString('sample'),
     );
   }
 

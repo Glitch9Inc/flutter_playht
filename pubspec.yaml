@@ -2,13 +2,18 @@ name: flutter_playht
 description: "A new Flutter package project."
 version: 0.0.1
 homepage: https://github.com/Glitch9Inc/flutter_playht
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 environment:
   sdk: ">=3.3.4 <4.0.0"
 
 dependencies:
-  http: ^1.1.0
+  dio: ^5.5.0+1
   meta: ^1.9.1
+  just_audio: ^0.9.18
+  audio_service: ^0.18.0
+  flutter_corelib:
+    path: ../flutter_corelib
 
 dev_dependencies:
   flutter_test:
