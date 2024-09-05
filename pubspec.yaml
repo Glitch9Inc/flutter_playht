@@ -11,7 +11,7 @@ dependencies:
   dio: ^5.5.0+1
   meta: ^1.9.1
   just_audio: ^0.9.18
-  audio_service: ^0.18.0
+  
   flutter_corelib:
     path: ../flutter_corelib
 
