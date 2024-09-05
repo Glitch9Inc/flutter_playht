@@ -15,7 +15,7 @@ class PlayHTEventHandler {
     _downloader = PlayHTDownloader(dio);
   }
 
-  Future<void> handleSseEvent(String event, Completer<String?> completer) async {
+  Future<void> handleSseEvent(String event, Completer<String?> completer, {FilePath? downloadPath}) async {
     if (event.isEmpty) {
       _logger.warning('Received empty event');
       return;
@@ -34,7 +34,7 @@ class PlayHTEventHandler {
           throw Exception('Failed to get TTS url');
         } else {
           _logger.info('TTS url: $url');
-          String? filePath = await _downloader.download(url);
+          String? filePath = await _downloader.download(url, downloadPath: downloadPath);
           completer.complete(filePath);
         }
       }

@@ -47,8 +47,9 @@ class PlayHT {
   }
 
   /// PlayHT에 TTS 요청을 보내고, SSE이벤트를 통해 음성 파일의 URL을 받습니다.
-  Future<String?> request(PlayHTRequest req, {bool playOnResponse = false, CancelToken? cancelToken}) async =>
-      await _client.request(req, playOnResponse: playOnResponse, cancelToken: cancelToken);
+  Future<String?> request(PlayHTRequest req,
+          {bool playOnResponse = false, FilePath? downloadPath, CancelToken? cancelToken}) async =>
+      await _client.request(req, playOnResponse: playOnResponse, downloadPath: downloadPath, cancelToken: cancelToken);
 
   /// PlayHT에 TTS 요청을 보내고, 스트림으로 음성 데이터(bytes)를 받습니다.
   Future<PlayHTResponse?> requestStream(PlayHTRequest req,

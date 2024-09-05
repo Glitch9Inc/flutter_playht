@@ -43,6 +43,7 @@ class PlayHTClient {
   Future<String?> request(
     PlayHTRequest req, {
     bool playOnResponse = false,
+    FilePath? downloadPath,
     CancelToken? cancelToken,
   }) async {
     const url = 'https://api.play.ht/api/v2/tts';
@@ -70,7 +71,7 @@ class PlayHTClient {
         stream.listen(
           (data) {
             final String event = String.fromCharCodes(data);
-            _eventHandler.handleSseEvent(event, completer);
+            _eventHandler.handleSseEvent(event, completer, downloadPath: downloadPath);
           },
           onError: (error) {
             _logger.severe('Error in SSE stream: $error');

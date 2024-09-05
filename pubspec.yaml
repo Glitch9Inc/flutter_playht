@@ -14,7 +14,7 @@ dependencies:
   
   flutter_corelib:
     path: ../flutter_corelib
-
+ 
 dev_dependencies:
   flutter_test:
     sdk: flutter
